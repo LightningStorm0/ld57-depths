@@ -1,0 +1,106 @@
+[gd_scene load_steps=16 format=3 uid="uid://b3rxt72pirsdw"]
+
+[ext_resource type="Script" uid="uid://bsxluuchvgbk6" path="res://classes/checkpoint.gd" id="1_n5b03"]
+[ext_resource type="Texture2D" uid="uid://cwpij4vgtn4op" path="res://assets/checkpoint.png" id="2_ajlda"]
+[ext_resource type="Material" uid="uid://bslt13cq5cm7h" path="res://shaders/drop_shadow.tres" id="2_ps7kv"]
+[ext_resource type="AudioStream" uid="uid://di5qlg2xjsrhb" path="res://audio/checkpoint.wav" id="3_ps7kv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajlda"]
+atlas = ExtResource("2_ajlda")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ps7kv"]
+atlas = ExtResource("2_ajlda")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yopnq"]
+atlas = ExtResource("2_ajlda")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87owg"]
+atlas = ExtResource("2_ajlda")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jksia"]
+atlas = ExtResource("2_ajlda")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r33xr"]
+atlas = ExtResource("2_ajlda")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iyg1f"]
+atlas = ExtResource("2_ajlda")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsg5a"]
+atlas = ExtResource("2_ajlda")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0864"]
+atlas = ExtResource("2_ajlda")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2o6r5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajlda")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ps7kv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yopnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87owg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jksia")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r33xr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iyg1f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fsg5a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w0864")
+}],
+"loop": false,
+"name": &"tag",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_70uel"]
+radius = 2.0
+height = 22.0
+
+[node name="Checkpoint" type="Area2D"]
+texture_filter = 1
+script = ExtResource("1_n5b03")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = ExtResource("2_ps7kv")
+position = Vector2(1, -15)
+sprite_frames = SubResource("SpriteFrames_2o6r5")
+animation = &"tag"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -11)
+shape = SubResource("CapsuleShape2D_70uel")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-306, -415)
+stream = ExtResource("3_ps7kv")
+pitch_scale = 2.0
+bus = &"Physical"

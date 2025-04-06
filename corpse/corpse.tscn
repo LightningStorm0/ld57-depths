@@ -1,0 +1,165 @@
+[gd_scene load_steps=16 format=4 uid="uid://dtc0m08ebd284"]
+
+[ext_resource type="Texture2D" uid="uid://c0hgsalw0it2g" path="res://assets/climber_parts.png" id="1_0c60p"]
+[ext_resource type="Script" uid="uid://tyo1e28l50lw" path="res://corpse/corpse.gd" id="1_j357f"]
+[ext_resource type="Script" uid="uid://cp56j8hshemt0" path="res://classes/thumper.gd" id="3_bosga"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_j357f"]
+bounce = 0.5
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0c60p"]
+atlas = ExtResource("1_0c60p")
+region = Rect2(3, 10, 6, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0c60p"]
+size = Vector2(6, 5)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bosga"]
+friction = 0.1
+bounce = 0.6
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j357f"]
+atlas = ExtResource("1_0c60p")
+region = Rect2(2, 5, 8, 4)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j357f"]
+radius = 2.0
+height = 8.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bosga"]
+atlas = ExtResource("1_0c60p")
+region = Rect2(11, 4, 4, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j357f"]
+size = Vector2(4, 5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y73v2"]
+atlas = ExtResource("1_0c60p")
+region = Rect2(10, 10, 2, 2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bosga"]
+size = Vector2(2, 2)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_515pv"]
+atlas = ExtResource("1_0c60p")
+region = Rect2(10, 13, 2, 2)
+
+[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_j357f"]
+data = PackedByteArray("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")
+format = 3
+
+[node name="Corpse" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_j357f")
+
+[node name="Position" type="Marker2D" parent="."]
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+position = Vector2(0, -8.5)
+collision_layer = 0
+physics_material_override = SubResource("PhysicsMaterial_j357f")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D2"]
+texture = SubResource("AtlasTexture_0c60p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2"]
+shape = SubResource("RectangleShape2D_0c60p")
+
+[node name="Thumper" type="Node" parent="RigidBody2D2"]
+script = ExtResource("3_bosga")
+metadata/_custom_type_script = "uid://cp56j8hshemt0"
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(0, -12)
+collision_layer = 0
+physics_material_override = SubResource("PhysicsMaterial_bosga")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D"]
+texture = SubResource("AtlasTexture_j357f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_j357f")
+
+[node name="Thumper" type="Node" parent="RigidBody2D"]
+script = ExtResource("3_bosga")
+metadata/_custom_type_script = "uid://cp56j8hshemt0"
+
+[node name="RigidBody2D3" type="RigidBody2D" parent="."]
+position = Vector2(0, -4.5)
+collision_layer = 0
+physics_material_override = SubResource("PhysicsMaterial_j357f")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D3"]
+texture = SubResource("AtlasTexture_bosga")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D3"]
+shape = SubResource("RectangleShape2D_j357f")
+
+[node name="Thumper" type="Node" parent="RigidBody2D3"]
+script = ExtResource("3_bosga")
+metadata/_custom_type_script = "uid://cp56j8hshemt0"
+
+[node name="RigidBody2D4" type="RigidBody2D" parent="."]
+position = Vector2(-3, -4)
+collision_layer = 0
+physics_material_override = SubResource("PhysicsMaterial_j357f")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D4"]
+texture = SubResource("AtlasTexture_y73v2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D4"]
+shape = SubResource("RectangleShape2D_bosga")
+
+[node name="Thumper" type="Node" parent="RigidBody2D4"]
+script = ExtResource("3_bosga")
+metadata/_custom_type_script = "uid://cp56j8hshemt0"
+
+[node name="RigidBody2D5" type="RigidBody2D" parent="."]
+position = Vector2(3, -4)
+collision_layer = 0
+physics_material_override = SubResource("PhysicsMaterial_j357f")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D5"]
+texture = SubResource("AtlasTexture_y73v2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D5"]
+shape = SubResource("RectangleShape2D_bosga")
+
+[node name="Thumper" type="Node" parent="RigidBody2D5"]
+script = ExtResource("3_bosga")
+metadata/_custom_type_script = "uid://cp56j8hshemt0"
+
+[node name="RigidBody2D6" type="RigidBody2D" parent="."]
+position = Vector2(-1, -1)
+collision_layer = 0
+physics_material_override = SubResource("PhysicsMaterial_j357f")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D6"]
+texture = SubResource("AtlasTexture_515pv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D6"]
+shape = SubResource("RectangleShape2D_bosga")
+
+[node name="Thumper" type="Node" parent="RigidBody2D6"]
+script = ExtResource("3_bosga")
+metadata/_custom_type_script = "uid://cp56j8hshemt0"
+
+[node name="RigidBody2D7" type="RigidBody2D" parent="."]
+position = Vector2(1, -1)
+collision_layer = 0
+physics_material_override = SubResource("PhysicsMaterial_j357f")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D7"]
+texture = SubResource("AtlasTexture_515pv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D7"]
+shape = SubResource("RectangleShape2D_bosga")
+
+[node name="Thumper" type="Node" parent="RigidBody2D7"]
+script = ExtResource("3_bosga")
+metadata/_custom_type_script = "uid://cp56j8hshemt0"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamWAV_j357f")
+bus = &"Physical"

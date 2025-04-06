@@ -1,0 +1,18 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://cjddhkshykod6"]
+
+[ext_resource type="Shader" uid="uid://8b24denw2xmr" path="res://shaders/darkmatter.gdshader" id="1_npxtd"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_npxtd"]
+noise_type = 2
+fractal_octaves = 3
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_gwq6d"]
+seamless = true
+noise = SubResource("FastNoiseLite_npxtd")
+
+[resource]
+shader = ExtResource("1_npxtd")
+shader_parameter/zoom = 40.0
+shader_parameter/background_color = Color(0, 0, 0, 1)
+shader_parameter/foreground_color = Color(0, 0, 0, 1)
+shader_parameter/noise = SubResource("NoiseTexture2D_gwq6d")

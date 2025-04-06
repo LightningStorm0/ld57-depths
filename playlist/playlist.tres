@@ -1,0 +1,12 @@
+[gd_resource type="AudioStreamPlaylist" load_steps=4 format=3 uid="uid://c8hga7esrjlkn"]
+
+[ext_resource type="AudioStream" uid="uid://d34cxegtsypr5" path="res://audio/soundtrack/LD57 - on top of the world.wav" id="1_1be6p"]
+[ext_resource type="AudioStream" uid="uid://chduut437us1m" path="res://audio/soundtrack/LD57 - ultimatum.wav" id="2_rv143"]
+[ext_resource type="AudioStream" uid="uid://bv3rsbf178yqi" path="res://audio/soundtrack/LD57 - for all time.wav" id="3_hj1i2"]
+
+[resource]
+fade_time = 1.0
+stream_count = 3
+stream_0 = ExtResource("1_1be6p")
+stream_1 = ExtResource("2_rv143")
+stream_2 = ExtResource("3_hj1i2")

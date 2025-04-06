@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://clpscnmqctxlu"]
+
+[ext_resource type="Script" uid="uid://c5pcxt5l3lg3q" path="res://stuff/grave.gd" id="1_bhmdc"]
+[ext_resource type="Material" uid="uid://bslt13cq5cm7h" path="res://shaders/drop_shadow.tres" id="1_d8uaf"]
+[ext_resource type="Texture2D" uid="uid://2fmu17lrfr5d" path="res://assets/grave.png" id="1_ocbxs"]
+
+[node name="Grave" type="Node2D"]
+show_behind_parent = true
+z_index = -1
+texture_filter = 1
+script = ExtResource("1_bhmdc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("1_d8uaf")
+position = Vector2(0, -6)
+texture = ExtResource("1_ocbxs")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(0, 5)
+target_position = Vector2(0, -8)
+hit_from_inside = true

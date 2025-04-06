@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bv3rsbf178yqi"
+path="res://.godot/imported/LD57 - for all time.wav-ed3f8862844f30039643fc422b59b1eb.sample"
+
+[deps]
+
+source_file="res://audio/soundtrack/LD57 - for all time.wav"
+dest_files=["res://.godot/imported/LD57 - for all time.wav-ed3f8862844f30039643fc422b59b1eb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

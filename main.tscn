@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://cdxrrh316hqtl"]
+
+[ext_resource type="Shader" uid="uid://bwwp24jnjylv8" path="res://shaders/main.gdshader" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cm73qvmxisedj" path="res://world.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://bdjwem1l0l3wa" path="res://scripts/color_rect.gd" id="2_h2yge"]
+[ext_resource type="Script" uid="uid://dsmjo47prmmbj" path="res://scripts/music.gd" id="4_1bvp3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0xm2m"]
+shader = ExtResource("1_0xm2m")
+shader_parameter/resolution = Vector2(948, 533)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_7dm0k"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+volume_db = -15.0
+script = ExtResource("4_1bvp3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 1
+material = SubResource("ShaderMaterial_0xm2m")
+custom_minimum_size = Vector2(640, 360)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_h2yge")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+custom_minimum_size = Vector2(640, 360)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_7dm0k")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="SubViewport" type="SubViewport" parent="."]
+canvas_item_default_texture_filter = 0
+audio_listener_enable_2d = true
+size = Vector2i(640, 360)
+size_2d_override = Vector2i(640, 360)
+
+[node name="World" parent="SubViewport" instance=ExtResource("1_ig7tw")]

@@ -1,0 +1,24 @@
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://duniou087ma23"]
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_5e4qm"]
+resource_name = "Reverb"
+room_size = 0.65
+damping = 0.18
+spread = 0.13
+wet = 0.25
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_5e4qm"]
+resource_name = "LowPassFilter"
+cutoff_hz = 1200.0
+
+[resource]
+bus/1/name = &"Physical"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectReverb_5e4qm")
+bus/1/effect/0/enabled = true
+bus/1/effect/1/effect = SubResource("AudioEffectLowPassFilter_5e4qm")
+bus/1/effect/1/enabled = true

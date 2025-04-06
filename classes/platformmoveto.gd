@@ -1,0 +1,1 @@
+class_name PlatformMoveTo extends Marker2D

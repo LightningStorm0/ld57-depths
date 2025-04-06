@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d34cxegtsypr5"
+path="res://.godot/imported/LD57 - on top of the world.wav-c8b076f7532b792a33a384620a2ebe8f.sample"
+
+[deps]
+
+source_file="res://audio/soundtrack/LD57 - on top of the world.wav"
+dest_files=["res://.godot/imported/LD57 - on top of the world.wav-c8b076f7532b792a33a384620a2ebe8f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
