@@ -277,7 +277,7 @@ size = Vector2(2, 3)
 texture_filter = 1
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("follow")]
-position = Vector2(320, -1355)
+position = Vector2(320, -1353)
 zoom = Vector2(2, 2)
 script = ExtResource("1_tlwt5")
 follow = NodePath("../Title")
@@ -366,7 +366,7 @@ color = Color(0, 0, 0, 0)
 
 [node name="Sky" type="Node2D" parent="."]
 z_index = -4
-position = Vector2(0, -978)
+position = Vector2(0, -976)
 
 [node name="ColorRect" type="ColorRect" parent="Sky"]
 offset_left = 160.0
@@ -434,7 +434,7 @@ color = Color(0.0265114, 0.0195406, 0.059559, 1)
 metadata/_edit_lock_ = true
 
 [node name="Background" type="Node2D" parent="."]
-position = Vector2(0, -978)
+position = Vector2(0, -976)
 
 [node name="Polygon2D2" type="Polygon2D" parent="Background"]
 color = Color(0.146047, 0.319389, 0.265984, 1)
@@ -442,7 +442,7 @@ polygon = PackedVector2Array(165, 369, 156, 390, 110, 662, 262, 664, 411, 669, 4
 metadata/_edit_lock_ = true
 
 [node name="Decorations" type="Node2D" parent="."]
-position = Vector2(0, -978)
+position = Vector2(0, -976)
 
 [node name="Sprite2D" type="Sprite2D" parent="Decorations"]
 material = ExtResource("7_2o6r5")
@@ -455,7 +455,7 @@ position = Vector2(333, 191)
 texture = ExtResource("3_wse8f")
 
 [node name="Checkpoints" type="Node2D" parent="."]
-position = Vector2(0, -978)
+position = Vector2(0, -976)
 
 [node name="Checkpoint" parent="Checkpoints" instance=ExtResource("5_ic0uy")]
 position = Vector2(306, 415)
@@ -512,7 +512,7 @@ position = Vector2(232, 2552)
 position = Vector2(175, 2678)
 
 [node name="Checkpoint18" parent="Checkpoints" instance=ExtResource("5_ic0uy")]
-position = Vector2(440, 2771)
+position = Vector2(444, 2772)
 
 [node name="Disablecrt" type="Sprite2D" parent="Checkpoints"]
 material = ExtResource("7_2o6r5")
@@ -521,7 +521,7 @@ texture = ExtResource("9_wukud")
 
 [node name="Platforms" type="Node2D" parent="."]
 z_index = 2
-position = Vector2(0, -978)
+position = Vector2(0, -976)
 
 [node name="Platform" type="Polygon2D" parent="Platforms"]
 position = Vector2(0, 177)
@@ -829,7 +829,7 @@ metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 
 [node name="StaticPlatform4" type="Polygon2D" parent="Platforms"]
 color = Color(0.0901961, 0.0745098, 0.0980392, 1)
-polygon = PackedVector2Array(149, 2423, 150, 4722, 488, 4725, 490, 2420, 466, 2423, 344, 2418, 342, 2428, 347, 2438, 352, 2440, 472, 2440, 472, 4479, 384, 4479, 320, 4447, 256, 4447, 192, 4415, 168, 4415, 168, 2440, 312, 2440, 316, 2435, 318, 2428, 316, 2417)
+polygon = PackedVector2Array(149, 2423, 150, 4722, 488, 4725, 490, 2420, 466, 2423, 344, 2418, 342, 2428, 347, 2438, 352, 2440, 472, 2440, 472, 2907.74, 472, 3060, 168, 3060, 168, 2440, 312, 2440, 316, 2435, 318, 2428, 316, 2417)
 uv = PackedVector2Array(149, 2423, 150, 4722, 488, 4725, 490, 2420, 466, 2423, 344, 2418, 342, 2428, 347, 2438, 352, 2440, 472, 2440, 472, 4479, 384, 4479, 320, 4447, 256, 4447, 192, 4415, 168, 4415, 168, 2440, 312, 2440, 316, 2435, 318, 2428, 316, 2417)
 script = ExtResource("9_26xuy")
 metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
@@ -957,7 +957,7 @@ metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 [node name="WhitePlatform24" type="Polygon2D" parent="Platforms"]
 z_index = -2
 position = Vector2(184, 2832)
-polygon = PackedVector2Array(8, -8, 92, -8, 92, 8, 8, 8)
+polygon = PackedVector2Array(0, -8, 68, -8, 68, 8, 0, 8)
 script = ExtResource("9_26xuy")
 shadow_color = Color(1, 1, 1, 0.5)
 metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
@@ -973,7 +973,7 @@ metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 [node name="WhitePlatform27" type="Polygon2D" parent="Platforms"]
 z_index = -2
 position = Vector2(200, 2864)
-polygon = PackedVector2Array(8, -8, 32, -8, 32, 8, 8, 8)
+polygon = PackedVector2Array(8, -8, 28, -8, 28, 8, 8, 8)
 script = ExtResource("9_26xuy")
 shadow_color = Color(1, 1, 1, 0.5)
 metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
@@ -981,47 +981,55 @@ metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 [node name="WhitePlatform28" type="Polygon2D" parent="Platforms"]
 z_index = -2
 position = Vector2(240, 2864)
-polygon = PackedVector2Array(8, -8, 32, -8, 32, 8, 8, 8)
+polygon = PackedVector2Array(4, -8, 32, -8, 32, 8, 4, 8)
 script = ExtResource("9_26xuy")
 shadow_color = Color(1, 1, 1, 0.5)
 metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 
 [node name="WhitePlatform37" type="Polygon2D" parent="Platforms"]
 z_index = -2
-position = Vector2(260, 2940)
-polygon = PackedVector2Array(8, -44, 32, -44, 32, 8, 8, 8)
+position = Vector2(308, 2944)
+polygon = PackedVector2Array(8, -32, 32, -32, 32, 4, 8, 4)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="WhitePlatform40" type="Polygon2D" parent="Platforms"]
+z_index = -2
+position = Vector2(252, 2948)
+polygon = PackedVector2Array(8, -32, 32, -32, 32, 0, 8, 0)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="WhitePlatform41" type="Polygon2D" parent="Platforms"]
+z_index = -2
+position = Vector2(196, 2952)
+polygon = PackedVector2Array(8, -32, 32, -32, 32, -4, 8, -4)
 script = ExtResource("9_26xuy")
 shadow_color = Color(1, 1, 1, 0.5)
 metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 
 [node name="WhitePlatform38" type="Polygon2D" parent="Platforms"]
 z_index = -2
-position = Vector2(340, 2940)
-polygon = PackedVector2Array(8, -44, 32, -44, 32, 8, 8, 8)
-script = ExtResource("9_26xuy")
-shadow_color = Color(1, 1, 1, 0.5)
-metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
-
-[node name="WhitePlatform39" type="Polygon2D" parent="Platforms"]
-z_index = -2
-position = Vector2(184, 2940)
-polygon = PackedVector2Array(8, -44, 32, -44, 32, 8, 8, 8)
+position = Vector2(364, 2944)
+polygon = PackedVector2Array(8, -36, 32, -36, 32, 4, 8, 4)
 script = ExtResource("9_26xuy")
 shadow_color = Color(1, 1, 1, 0.5)
 metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 
 [node name="WhitePlatform29" type="Polygon2D" parent="Platforms"]
 z_index = -2
-position = Vector2(280, 2864)
-polygon = PackedVector2Array(8, -8, 32, -8, 32, 8, 8, 8)
+position = Vector2(256, 2880)
+polygon = PackedVector2Array(0, -8, 16, -8, 24, 0, 88, 0, 96, -8, 128, -8, 112, 8, 16, 8)
 script = ExtResource("9_26xuy")
 shadow_color = Color(1, 1, 1, 0.5)
 metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 
 [node name="WhitePlatform30" type="Polygon2D" parent="Platforms"]
 z_index = -2
-position = Vector2(320, 2864)
-polygon = PackedVector2Array(8, -8, 32, -8, 32, 8, 8, 8)
+position = Vector2(388, 2884)
+polygon = PackedVector2Array(12, 4, 28, 4, 28, 8, 12, 8)
 script = ExtResource("9_26xuy")
 shadow_color = Color(1, 1, 1, 0.5)
 metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
@@ -1029,7 +1037,15 @@ metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 [node name="WhitePlatform31" type="Polygon2D" parent="Platforms"]
 z_index = -2
 position = Vector2(360, 2864)
-polygon = PackedVector2Array(8, -8, 88, -8, 88, 8, 8, 8)
+polygon = PackedVector2Array(8, -8, 84, -8, 84, 8, -8, 8)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="WhitePlatform32" type="Polygon2D" parent="Platforms"]
+z_index = -2
+position = Vector2(360, 2864)
+polygon = PackedVector2Array(108, -8, 116, -8, 116, 8, 108, 8)
 script = ExtResource("9_26xuy")
 shadow_color = Color(1, 1, 1, 0.5)
 metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
@@ -1037,7 +1053,7 @@ metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 [node name="WhitePlatform36" type="Polygon2D" parent="Platforms"]
 z_index = -2
 position = Vector2(384, 2956)
-polygon = PackedVector2Array(-192, -8, 88, -8, 88, 8, -192, 8)
+polygon = PackedVector2Array(-180, -8, 88, -8, 88, 8, -180, 8)
 script = ExtResource("9_26xuy")
 shadow_color = Color(1, 1, 1, 0.5)
 metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
@@ -1046,38 +1062,6 @@ metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 z_index = -2
 position = Vector2(364, 3052)
 polygon = PackedVector2Array(-196, -5, -168, -5, -156, -13, -144, -21, -132, -21, -120, -13, -108, -5, 108, -5, 108, 7, -196, 7)
-script = ExtResource("9_26xuy")
-shadow_color = Color(1, 1, 1, 0.5)
-metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
-
-[node name="WhitePlatform32" type="Polygon2D" parent="Platforms"]
-z_index = -2
-position = Vector2(384, 2892)
-polygon = PackedVector2Array(72, -8, 88, -8, 88, 8, 72, 8)
-script = ExtResource("9_26xuy")
-shadow_color = Color(1, 1, 1, 0.5)
-metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
-
-[node name="WhitePlatform33" type="Polygon2D" parent="Platforms"]
-z_index = -2
-position = Vector2(336, 2940)
-polygon = PackedVector2Array(72, -8, 136, -8, 136, 8, 72, 8)
-script = ExtResource("9_26xuy")
-shadow_color = Color(1, 1, 1, 0.5)
-metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
-
-[node name="WhitePlatform34" type="Polygon2D" parent="Platforms"]
-z_index = -2
-position = Vector2(368, 2908)
-polygon = PackedVector2Array(72, -8, 104, -8, 104, 8, 72, 8)
-script = ExtResource("9_26xuy")
-shadow_color = Color(1, 1, 1, 0.5)
-metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
-
-[node name="WhitePlatform35" type="Polygon2D" parent="Platforms"]
-z_index = -2
-position = Vector2(352, 2924)
-polygon = PackedVector2Array(72, -8, 120, -8, 120, 8, 72, 8)
 script = ExtResource("9_26xuy")
 shadow_color = Color(1, 1, 1, 0.5)
 metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
@@ -1156,7 +1140,7 @@ metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 
 [node name="Water" type="Node2D" parent="."]
 z_index = 1
-position = Vector2(0, -978)
+position = Vector2(0, -976)
 
 [node name="Water" type="Polygon2D" parent="Water"]
 position = Vector2(181, 1000)
@@ -1230,7 +1214,7 @@ script = ExtResource("6_hiqwa")
 metadata/_custom_type_script = "uid://2qqgn2ssyrrt"
 
 [node name="Spikes" type="Node2D" parent="."]
-position = Vector2(0, -978)
+position = Vector2(0, -976)
 
 [node name="Group" type="Node2D" parent="Spikes"]
 position = Vector2(313, 655)
@@ -2228,120 +2212,460 @@ script = ExtResource("9_26xuy")
 shadow_color = Color(1, 1, 1, 0.5)
 metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 
-[node name="Group173" type="Node2D" parent="Spikes"]
+[node name="Group182" type="Node2D" parent="Spikes"]
 z_index = -1
-position = Vector2(240, 2880)
+position = Vector2(320, 2844)
 rotation = 1.5708
 metadata/_edit_group_ = true
 
-[node name="Spike" parent="Spikes/Group173" instance=ExtResource("6_70uel")]
+[node name="Spike" parent="Spikes/Group182" instance=ExtResource("6_70uel")]
 position = Vector2(0, -2)
 
-[node name="Spike2" parent="Spikes/Group173" instance=ExtResource("6_70uel")]
+[node name="Spike2" parent="Spikes/Group182" instance=ExtResource("6_70uel")]
 position = Vector2(0, 2)
 rotation = 3.14159
 
-[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group173"]
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group182"]
 position = Vector2(-7, 4)
 polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
 script = ExtResource("9_26xuy")
 shadow_color = Color(1, 1, 1, 0.5)
 metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 
-[node name="Group174" type="Node2D" parent="Spikes"]
+[node name="Group183" type="Node2D" parent="Spikes"]
 z_index = -1
-position = Vector2(240, 2888)
+position = Vector2(320, 2852)
 rotation = 1.5708
 metadata/_edit_group_ = true
 
-[node name="Spike" parent="Spikes/Group174" instance=ExtResource("6_70uel")]
+[node name="Spike" parent="Spikes/Group183" instance=ExtResource("6_70uel")]
 position = Vector2(0, -2)
 
-[node name="Spike2" parent="Spikes/Group174" instance=ExtResource("6_70uel")]
+[node name="Spike2" parent="Spikes/Group183" instance=ExtResource("6_70uel")]
 position = Vector2(0, 2)
 rotation = 3.14159
 
-[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group174"]
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group183"]
 position = Vector2(-7, 4)
 polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
 script = ExtResource("9_26xuy")
 shadow_color = Color(1, 1, 1, 0.5)
 metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 
-[node name="Group175" type="Node2D" parent="Spikes"]
+[node name="Group184" type="Node2D" parent="Spikes"]
 z_index = -1
-position = Vector2(240, 2896)
+position = Vector2(440, 2876)
 rotation = 1.5708
 metadata/_edit_group_ = true
 
-[node name="Spike" parent="Spikes/Group175" instance=ExtResource("6_70uel")]
+[node name="Spike" parent="Spikes/Group184" instance=ExtResource("6_70uel")]
 position = Vector2(0, -2)
 
-[node name="Spike2" parent="Spikes/Group175" instance=ExtResource("6_70uel")]
+[node name="Spike2" parent="Spikes/Group184" instance=ExtResource("6_70uel")]
 position = Vector2(0, 2)
 rotation = 3.14159
 
-[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group175"]
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group184"]
 position = Vector2(-7, 4)
 polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
 script = ExtResource("9_26xuy")
 shadow_color = Color(1, 1, 1, 0.5)
 metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 
-[node name="Group176" type="Node2D" parent="Spikes"]
+[node name="Group185" type="Node2D" parent="Spikes"]
 z_index = -1
-position = Vector2(320, 2880)
+position = Vector2(440, 2884)
 rotation = 1.5708
 metadata/_edit_group_ = true
 
-[node name="Spike" parent="Spikes/Group176" instance=ExtResource("6_70uel")]
+[node name="Spike" parent="Spikes/Group185" instance=ExtResource("6_70uel")]
 position = Vector2(0, -2)
 
-[node name="Spike2" parent="Spikes/Group176" instance=ExtResource("6_70uel")]
+[node name="Spike2" parent="Spikes/Group185" instance=ExtResource("6_70uel")]
 position = Vector2(0, 2)
 rotation = 3.14159
 
-[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group176"]
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group185"]
 position = Vector2(-7, 4)
 polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
 script = ExtResource("9_26xuy")
 shadow_color = Color(1, 1, 1, 0.5)
 metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 
-[node name="Group177" type="Node2D" parent="Spikes"]
+[node name="Group186" type="Node2D" parent="Spikes"]
 z_index = -1
-position = Vector2(320, 2888)
+position = Vector2(440, 2892)
 rotation = 1.5708
 metadata/_edit_group_ = true
 
-[node name="Spike" parent="Spikes/Group177" instance=ExtResource("6_70uel")]
+[node name="Spike" parent="Spikes/Group186" instance=ExtResource("6_70uel")]
 position = Vector2(0, -2)
 
-[node name="Spike2" parent="Spikes/Group177" instance=ExtResource("6_70uel")]
+[node name="Spike2" parent="Spikes/Group186" instance=ExtResource("6_70uel")]
 position = Vector2(0, 2)
 rotation = 3.14159
 
-[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group177"]
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group186"]
 position = Vector2(-7, 4)
 polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
 script = ExtResource("9_26xuy")
 shadow_color = Color(1, 1, 1, 0.5)
 metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 
-[node name="Group178" type="Node2D" parent="Spikes"]
+[node name="Group187" type="Node2D" parent="Spikes"]
 z_index = -1
-position = Vector2(320, 2896)
+position = Vector2(440, 2900)
 rotation = 1.5708
 metadata/_edit_group_ = true
 
-[node name="Spike" parent="Spikes/Group178" instance=ExtResource("6_70uel")]
+[node name="Spike" parent="Spikes/Group187" instance=ExtResource("6_70uel")]
 position = Vector2(0, -2)
 
-[node name="Spike2" parent="Spikes/Group178" instance=ExtResource("6_70uel")]
+[node name="Spike2" parent="Spikes/Group187" instance=ExtResource("6_70uel")]
 position = Vector2(0, 2)
 rotation = 3.14159
 
-[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group178"]
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group187"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group188" type="Node2D" parent="Spikes"]
+z_index = -1
+position = Vector2(440, 2908)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group188" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group188" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group188"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group189" type="Node2D" parent="Spikes"]
+z_index = -1
+position = Vector2(440, 2916)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group189" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group189" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group189"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group190" type="Node2D" parent="Spikes"]
+z_index = -1
+position = Vector2(472, 2876)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group190" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group190" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group190"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group191" type="Node2D" parent="Spikes"]
+z_index = -1
+position = Vector2(472, 2884)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group191" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group191" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group191"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group192" type="Node2D" parent="Spikes"]
+z_index = -1
+position = Vector2(472, 2892)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group192" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group192" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group192"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group193" type="Node2D" parent="Spikes"]
+z_index = -1
+position = Vector2(472, 2900)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group193" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group193" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group193"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group194" type="Node2D" parent="Spikes"]
+z_index = -1
+position = Vector2(472, 2908)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group194" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group194" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group194"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group195" type="Node2D" parent="Spikes"]
+z_index = -1
+position = Vector2(472, 2916)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group195" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group195" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group195"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group196" type="Node2D" parent="Spikes"]
+z_index = -1
+position = Vector2(440, 2924)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group196" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group196" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group196"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group197" type="Node2D" parent="Spikes"]
+z_index = -1
+position = Vector2(408, 2896)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group197" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group197" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group197"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group199" type="Node2D" parent="Spikes"]
+z_index = -1
+position = Vector2(408, 2904)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group199" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group199" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group199"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group200" type="Node2D" parent="Spikes"]
+z_index = -1
+position = Vector2(408, 2912)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group200" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group200" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group200"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group201" type="Node2D" parent="Spikes"]
+z_index = -1
+position = Vector2(408, 2920)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group201" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group201" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group201"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group202" type="Node2D" parent="Spikes"]
+z_index = -1
+position = Vector2(408, 2928)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group202" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group202" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group202"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group203" type="Node2D" parent="Spikes"]
+z_index = -1
+position = Vector2(408, 2936)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group203" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group203" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group203"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group204" type="Node2D" parent="Spikes"]
+z_index = -1
+position = Vector2(408, 2944)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group204" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group204" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group204"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group198" type="Node2D" parent="Spikes"]
+z_index = -1
+position = Vector2(472, 2924)
+rotation = 1.5708
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group198" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group198" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group198"]
 position = Vector2(-7, 4)
 polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
 script = ExtResource("9_26xuy")
@@ -3018,6 +3342,276 @@ script = ExtResource("9_26xuy")
 shadow_color = Color(1, 1, 1, 0.5)
 metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 
+[node name="Group179" type="Node2D" parent="Spikes"]
+position = Vector2(272, 2832)
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group179" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group179" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group179"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group180" type="Node2D" parent="Spikes"]
+position = Vector2(264, 2832)
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group180" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group180" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group180"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group181" type="Node2D" parent="Spikes"]
+position = Vector2(256, 2832)
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group181" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group181" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group181"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group167" type="Node2D" parent="Spikes"]
+position = Vector2(368, 2920)
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group167" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group167" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group167"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group205" type="Node2D" parent="Spikes"]
+position = Vector2(360, 2920)
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group205" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group205" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group205"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group206" type="Node2D" parent="Spikes"]
+position = Vector2(352, 2920)
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group206" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group206" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group206"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group207" type="Node2D" parent="Spikes"]
+position = Vector2(344, 2920)
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group207" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group207" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group207"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group168" type="Node2D" parent="Spikes"]
+position = Vector2(312, 2924)
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group168" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group168" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group168"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group208" type="Node2D" parent="Spikes"]
+position = Vector2(304, 2924)
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group208" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group208" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group208"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group209" type="Node2D" parent="Spikes"]
+position = Vector2(296, 2924)
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group209" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group209" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group209"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group210" type="Node2D" parent="Spikes"]
+position = Vector2(288, 2924)
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group210" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group210" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group210"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group169" type="Node2D" parent="Spikes"]
+position = Vector2(256, 2928)
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group169" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group169" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group169"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group211" type="Node2D" parent="Spikes"]
+position = Vector2(248, 2928)
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group211" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group211" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group211"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group212" type="Node2D" parent="Spikes"]
+position = Vector2(240, 2928)
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group212" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group212" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group212"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Group213" type="Node2D" parent="Spikes"]
+position = Vector2(232, 2928)
+metadata/_edit_group_ = true
+
+[node name="Spike" parent="Spikes/Group213" instance=ExtResource("6_70uel")]
+position = Vector2(0, -2)
+
+[node name="Spike2" parent="Spikes/Group213" instance=ExtResource("6_70uel")]
+position = Vector2(0, 2)
+rotation = 3.14159
+
+[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group213"]
+position = Vector2(-7, 4)
+polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
+script = ExtResource("9_26xuy")
+shadow_color = Color(1, 1, 1, 0.5)
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
 [node name="Group128" type="Node2D" parent="Spikes"]
 position = Vector2(288, 2832)
 metadata/_edit_group_ = true
@@ -3073,7 +3667,7 @@ shadow_color = Color(1, 1, 1, 0.5)
 metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 
 [node name="Group165" type="Node2D" parent="Spikes"]
-position = Vector2(236, 2864)
+position = Vector2(232, 2864)
 metadata/_edit_group_ = true
 
 [node name="Spike" parent="Spikes/Group165" instance=ExtResource("6_70uel")]
@@ -3091,7 +3685,7 @@ shadow_color = Color(1, 1, 1, 0.5)
 metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
 
 [node name="Group166" type="Node2D" parent="Spikes"]
-position = Vector2(244, 2864)
+position = Vector2(240, 2864)
 metadata/_edit_group_ = true
 
 [node name="Spike" parent="Spikes/Group166" instance=ExtResource("6_70uel")]
@@ -3102,114 +3696,6 @@ position = Vector2(0, 2)
 rotation = 3.14159
 
 [node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group166"]
-position = Vector2(-7, 4)
-polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
-script = ExtResource("9_26xuy")
-shadow_color = Color(1, 1, 1, 0.5)
-metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
-
-[node name="Group167" type="Node2D" parent="Spikes"]
-position = Vector2(276, 2864)
-metadata/_edit_group_ = true
-
-[node name="Spike" parent="Spikes/Group167" instance=ExtResource("6_70uel")]
-position = Vector2(0, -2)
-
-[node name="Spike2" parent="Spikes/Group167" instance=ExtResource("6_70uel")]
-position = Vector2(0, 2)
-rotation = 3.14159
-
-[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group167"]
-position = Vector2(-7, 4)
-polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
-script = ExtResource("9_26xuy")
-shadow_color = Color(1, 1, 1, 0.5)
-metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
-
-[node name="Group168" type="Node2D" parent="Spikes"]
-position = Vector2(284, 2864)
-metadata/_edit_group_ = true
-
-[node name="Spike" parent="Spikes/Group168" instance=ExtResource("6_70uel")]
-position = Vector2(0, -2)
-
-[node name="Spike2" parent="Spikes/Group168" instance=ExtResource("6_70uel")]
-position = Vector2(0, 2)
-rotation = 3.14159
-
-[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group168"]
-position = Vector2(-7, 4)
-polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
-script = ExtResource("9_26xuy")
-shadow_color = Color(1, 1, 1, 0.5)
-metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
-
-[node name="Group169" type="Node2D" parent="Spikes"]
-position = Vector2(316, 2864)
-metadata/_edit_group_ = true
-
-[node name="Spike" parent="Spikes/Group169" instance=ExtResource("6_70uel")]
-position = Vector2(0, -2)
-
-[node name="Spike2" parent="Spikes/Group169" instance=ExtResource("6_70uel")]
-position = Vector2(0, 2)
-rotation = 3.14159
-
-[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group169"]
-position = Vector2(-7, 4)
-polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
-script = ExtResource("9_26xuy")
-shadow_color = Color(1, 1, 1, 0.5)
-metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
-
-[node name="Group170" type="Node2D" parent="Spikes"]
-position = Vector2(324, 2864)
-metadata/_edit_group_ = true
-
-[node name="Spike" parent="Spikes/Group170" instance=ExtResource("6_70uel")]
-position = Vector2(0, -2)
-
-[node name="Spike2" parent="Spikes/Group170" instance=ExtResource("6_70uel")]
-position = Vector2(0, 2)
-rotation = 3.14159
-
-[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group170"]
-position = Vector2(-7, 4)
-polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
-script = ExtResource("9_26xuy")
-shadow_color = Color(1, 1, 1, 0.5)
-metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
-
-[node name="Group171" type="Node2D" parent="Spikes"]
-position = Vector2(356, 2864)
-metadata/_edit_group_ = true
-
-[node name="Spike" parent="Spikes/Group171" instance=ExtResource("6_70uel")]
-position = Vector2(0, -2)
-
-[node name="Spike2" parent="Spikes/Group171" instance=ExtResource("6_70uel")]
-position = Vector2(0, 2)
-rotation = 3.14159
-
-[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group171"]
-position = Vector2(-7, 4)
-polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
-script = ExtResource("9_26xuy")
-shadow_color = Color(1, 1, 1, 0.5)
-metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
-
-[node name="Group172" type="Node2D" parent="Spikes"]
-position = Vector2(364, 2864)
-metadata/_edit_group_ = true
-
-[node name="Spike" parent="Spikes/Group172" instance=ExtResource("6_70uel")]
-position = Vector2(0, -2)
-
-[node name="Spike2" parent="Spikes/Group172" instance=ExtResource("6_70uel")]
-position = Vector2(0, 2)
-rotation = 3.14159
-
-[node name="WhitePlatform6" type="Polygon2D" parent="Spikes/Group172"]
 position = Vector2(-7, 4)
 polygon = PackedVector2Array(1, -7, 13, -7, 13, -1, 1, -1)
 script = ExtResource("9_26xuy")
@@ -4349,7 +4835,7 @@ position = Vector2(-16, 0)
 
 [node name="MovingPlatforms" type="Node2D" parent="."]
 z_index = 1
-position = Vector2(0, -978)
+position = Vector2(0, -976)
 
 [node name="MovingPlatform" type="Polygon2D" parent="MovingPlatforms"]
 position = Vector2(319, 1655)
@@ -4603,7 +5089,7 @@ script = ExtResource("13_cbp6q")
 metadata/_custom_type_script = "uid://bio2bjy06kbwr"
 
 [node name="Climber" type="CharacterBody2D" parent="."]
-position = Vector2(312, -786)
+position = Vector2(312, -784)
 slide_on_ceiling = false
 floor_stop_on_slope = false
 script = ExtResource("1_fj7yv")
@@ -4657,7 +5143,8 @@ wait_time = 2.0
 one_shot = true
 
 [node name="DarkMatter" type="Node2D" parent="."]
-position = Vector2(0, 1928)
+z_index = 1
+position = Vector2(0, 1930)
 
 [node name="DarkMatter" type="Polygon2D" parent="DarkMatter"]
 material = ExtResource("12_cbp6q")
@@ -4685,10 +5172,15 @@ script = ExtResource("13_26xuy")
 
 [node name="DarkMatter12" type="Polygon2D" parent="DarkMatter"]
 material = ExtResource("12_cbp6q")
-position = Vector2(320, 14)
-polygon = PackedVector2Array(152, -44, -84.4427, -44, -152, -44, -152, 24, 152, 24)
+position = Vector2(604, -18)
+polygon = PackedVector2Array(-140, -44, -156, -44, -156, 44, -140, 44)
 script = ExtResource("13_26xuy")
-metadata/_edit_lock_ = true
+
+[node name="DarkMatter16" type="Polygon2D" parent="DarkMatter"]
+material = ExtResource("12_cbp6q")
+position = Vector2(572, 14)
+polygon = PackedVector2Array(-140, -44, -156, -44, -156, 12, -140, 12)
+script = ExtResource("13_26xuy")
 
 [node name="DarkMatter7" type="Polygon2D" parent="DarkMatter"]
 material = ExtResource("12_cbp6q")
@@ -4711,7 +5203,25 @@ script = ExtResource("13_26xuy")
 [node name="DarkMatter10" type="Polygon2D" parent="DarkMatter"]
 material = ExtResource("12_cbp6q")
 position = Vector2(12, -2462)
-polygon = PackedVector2Array(460, 2344, 156, 2344, 156, 2408, 460, 2408)
+polygon = PackedVector2Array(392, 2344, 208, 2344, 208, 2376, 392, 2376)
+script = ExtResource("13_26xuy")
+
+[node name="DarkMatter15" type="Polygon2D" parent="DarkMatter"]
+material = ExtResource("12_cbp6q")
+position = Vector2(36, -2406)
+polygon = PackedVector2Array(360, 2344, 208, 2344, 208, 2352, 240, 2352, 240, 2372, 244, 2376, 308, 2376, 332, 2352, 360, 2352)
+script = ExtResource("13_26xuy")
+
+[node name="DarkMatter13" type="Polygon2D" parent="DarkMatter"]
+material = ExtResource("12_cbp6q")
+position = Vector2(76, -2514)
+polygon = PackedVector2Array(392, 2344, 384, 2344, 384, 2428, 392, 2428)
+script = ExtResource("13_26xuy")
+
+[node name="DarkMatter14" type="Polygon2D" parent="DarkMatter"]
+material = ExtResource("12_cbp6q")
+position = Vector2(-212, -2438)
+polygon = PackedVector2Array(392, 2344, 384, 2344, 384, 2384, 392, 2384)
 script = ExtResource("13_26xuy")
 
 [node name="DarkMatter11" type="Polygon2D" parent="DarkMatter"]
@@ -4733,7 +5243,7 @@ polygon = PackedVector2Array(548, 2360, 540, 2360, 540, 2416, 548, 2416)
 script = ExtResource("13_26xuy")
 
 [node name="Clouds" type="Node2D" parent="."]
-position = Vector2(328, -1062)
+position = Vector2(328, -1060)
 scale = Vector2(0.5, 0.5)
 
 [node name="Polygon2D2" type="Polygon2D" parent="Clouds"]
@@ -4794,13 +5304,13 @@ color = Color(0.211765, 0.203922, 0.207843, 1)
 polygon = PackedVector2Array(-24, -25, -16, -25, -20, -20, -25, -23)
 
 [node name="Title" type="Sprite2D" parent="."]
-position = Vector2(357, -948.75)
+position = Vector2(357, -946.75)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_pkg7o")
 
 [node name="Finish" type="Node2D" parent="."]
 z_index = -2
-position = Vector2(0, -978)
+position = Vector2(0, -976)
 
 [node name="Timer" type="Timer" parent="Finish"]
 one_shot = true
@@ -4863,7 +5373,7 @@ polygon = PackedVector2Array(-7, 0, -7, -14, -3, -18, 3, -18, 7, -14, 7, 0)
 
 [node name="Disablemusic" type="Sprite2D" parent="."]
 material = ExtResource("7_2o6r5")
-position = Vector2(278, -507)
+position = Vector2(278, -505)
 texture = ExtResource("23_il2jm")
 
 [connection signal="timeout" from="Camera2D/Timer" to="Camera2D" method="_on_timer_timeout"]

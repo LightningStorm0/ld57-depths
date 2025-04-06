@@ -13,7 +13,7 @@ config_version=5
 config/name="LD57-DEPTHS"
 run/main_scene="uid://cdxrrh316hqtl"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://bnob1yxugvqiq"
 
 [audio]
 
@@ -29,8 +29,7 @@ window/stretch/aspect="ignore"
 
 [editor]
 
-movie_writer/mjpeg_quality=0.9
-movie_writer/movie_file="C:/Users/Warre/OneDrive/Documents/Godot Exports/LD57 - Depths - Video/preview.avi"
+movie_writer/movie_file="C:/Users/Warre/OneDrive/Documents/Godot Exports/LD57 - Depths - Video/preview.png"
 
 [input]
 

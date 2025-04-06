@@ -21,12 +21,14 @@ vec4 get_color(vec2 thisUV) {
 	modified_screen_uv *= vec2(0.98, 0.92);
 	modified_screen_uv += vec2(0.5, 0.5);
 
-	modified_screen_uv.x = clamp(modified_screen_uv.x, 0.001, 0.999);
-	modified_screen_uv.y = clamp(modified_screen_uv.y, 0.001, 0.999);
+	vec2 clamped_uv = vec2(0.0, 0.0);
 
-	thisCOLOR.r = texture(SCREEN_TEXTURE, modified_screen_uv + vec2(0.0, 0.5 / resolution.y)).r;
-	thisCOLOR.g = texture(SCREEN_TEXTURE, modified_screen_uv + vec2(0.5 / resolution.x, 0.5 / resolution.y)).g;
-	thisCOLOR.b = texture(SCREEN_TEXTURE, modified_screen_uv + vec2(0.5 / resolution.x, 0.0)).b;
+	clamped_uv.x = clamp(modified_screen_uv.x, 0.001, 0.999);
+	clamped_uv.y = clamp(modified_screen_uv.y, 0.001, 0.999);
+
+	thisCOLOR.r = texture(SCREEN_TEXTURE, clamped_uv + vec2(0.0, 0.5 / resolution.y)).r;
+	thisCOLOR.g = texture(SCREEN_TEXTURE, clamped_uv + vec2(0.5 / resolution.x, 0.5 / resolution.y)).g;
+	thisCOLOR.b = texture(SCREEN_TEXTURE, clamped_uv + vec2(0.5 / resolution.x, 0.0)).b;
 
 	float sampled_mod = abs(mod(modified_screen_uv.y * resolution.y, 2.0) - 1.0);
 

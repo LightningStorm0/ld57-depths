@@ -9,12 +9,12 @@ void vertex() {
 
 void fragment() {
 	vec2 shadow_uv = UV + (vec2(offset_pixels) / vec2(textureSize(TEXTURE, 0)) );
-	
+
 	COLOR = shadow_color;
 	COLOR.a = texture(TEXTURE, shadow_uv).a * shadow_color.a;
-	
+
 	float solidAlpha = texture(TEXTURE, UV).a;
-	
+
 	COLOR.rgb -= COLOR.rgb * solidAlpha;
 	COLOR.rgb += texture(TEXTURE, UV).rgb * solidAlpha;
 	COLOR.a += solidAlpha;

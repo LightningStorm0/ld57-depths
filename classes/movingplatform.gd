@@ -15,7 +15,20 @@ var first_position : bool = true
 
 var distance = 1.0
 
+var move_sound : AudioStreamWAV = preload("res://audio/water/water2.wav")
+var stop_sound : AudioStreamWAV = preload("res://audio/thumps/thump5.wav")
+
+var audio : AudioStreamPlayer2D
+
 func _ready() -> void:
+	audio = AudioStreamPlayer2D.new()
+	audio.volume_db = -2
+	audio.max_distance = 250
+	
+	audio.bus = "Physical"
+	
+	self.add_child(audio)
+	
 	super._ready()
 	
 	starting_position = global_position
@@ -104,5 +117,7 @@ func _physics_process(delta : float) -> void:
 		if move.length() < 0.01:
 			time = pause_time
 			first_position = !first_position
+			audio.stream = stop_sound
+			audio.play()
 	else:
 		time -= delta

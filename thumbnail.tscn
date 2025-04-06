@@ -1,0 +1,497 @@
+[gd_scene load_steps=9 format=3 uid="uid://ckdrldkh7qvtl"]
+
+[ext_resource type="Script" uid="uid://bcr302jvxldi4" path="res://thumbnails/take_photo.gd" id="1_af4k1"]
+[ext_resource type="Texture2D" uid="uid://bip0qkxdjnf5c" path="res://assets/title.png" id="1_g1eue"]
+[ext_resource type="Script" uid="uid://dhvjujmdp6cjr" path="res://classes/staticplatform.gd" id="2_af4k1"]
+[ext_resource type="Texture2D" uid="uid://dohjse166fj5i" path="res://assets/climber.png" id="4_xw14l"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_g1eue"]
+viewport_path = NodePath("Itch")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_af4k1"]
+viewport_path = NodePath("Ludum Dare")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_i5wbl"]
+viewport_path = NodePath("Ludum Dare Banner")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_t7lj5"]
+viewport_path = NodePath("Icon")
+
+[node name="Itch" type="Node2D"]
+texture_filter = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1260.0
+offset_bottom = 1000.0
+texture = SubResource("ViewportTexture_g1eue")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+offset_left = 1374.0
+offset_right = 2654.0
+offset_bottom = 1024.0
+texture = SubResource("ViewportTexture_af4k1")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+offset_left = 2730.0
+offset_top = 46.0
+offset_right = 4010.0
+offset_bottom = 406.0
+texture = SubResource("ViewportTexture_i5wbl")
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+offset_left = 4097.0
+offset_top = 69.0
+offset_right = 4129.0
+offset_bottom = 101.0
+texture = SubResource("ViewportTexture_t7lj5")
+
+[node name="Itch" type="SubViewport" parent="."]
+canvas_item_default_texture_filter = 0
+size = Vector2i(1260, 1000)
+script = ExtResource("1_af4k1")
+file_name = "itch.png"
+
+[node name="Mountain" type="Node2D" parent="Itch"]
+position = Vector2(-234, 30)
+scale = Vector2(1.86738, 1.86738)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Itch/Mountain"]
+color = Color(0.146047, 0.319389, 0.265984, 1)
+polygon = PackedVector2Array(165, 369, 156, 390, 110, 662, 262, 664, 411, 669, 481, 667, 492, 664, 492, 358, 484, 348, 477, 336, 466, 323, 459, 309, 451, 291, 445, 274, 435, 258, 421, 254, 405, 243, 392, 236, 381, 222, 368, 209, 350, 205, 339, 200, 287, 197, 279, 201, 267, 208, 258, 219, 244, 229, 230, 240, 217, 250, 212, 271, 210, 295, 199, 322, 183, 327)
+
+[node name="Platform" type="Polygon2D" parent="Itch/Mountain"]
+position = Vector2(0, 177)
+color = Color(0.200925, 0.418321, 0.352166, 1)
+polygon = PackedVector2Array(192, 298, 175, 310, 165, 332, 164, 339, 163, 353, 163, 366, 165, 378, 168, 391, 174, 406, 184, 423, 189, 429, 199, 439, 208, 447, 218, 452, 236, 459, 243, 459, 245, 457, 247, 452, 248, 450, 270, 448, 272, 444, 273, 439, 275, 438, 287, 438, 295, 437, 297, 440, 294, 446, 295, 450, 295, 457, 295, 459, 297, 466, 302, 478, 317, 478, 325, 476, 326, 468, 325, 455, 325, 450, 326, 445, 327, 442, 326, 439, 323, 437, 320, 436, 319, 434, 319, 432, 348, 430, 349, 432, 348, 434, 347, 435, 342, 436, 339, 438, 337, 445, 337, 450, 337, 452, 337, 455, 338, 459, 340, 473, 348, 472, 361, 472, 366, 467, 365, 443, 366, 438, 368, 435, 392, 436, 397, 436, 406, 429, 416, 428, 423, 429, 424, 433, 424, 443.626, 437, 443, 437, 445, 430, 447, 424, 447.434, 422, 455, 423, 466, 429, 467, 437, 468, 436, 471, 429, 471, 424, 472, 423, 478, 423, 488, 424, 493, 429, 495, 438, 496, 437, 498, 426, 499, 252, 497, 224, 502, 190, 500, 176, 502, 170, 511, 139, 510, 92, 491, 126, 348, 132, 319, 143, 279, 149, 244, 150, 205, 176, 157, 180, 155, 183, 155, 183, 159, 182, 171, 186, 178, 205, 181, 208, 184, 210, 196, 212, 200, 233, 202, 235, 206, 236, 215, 238, 225, 240, 227, 253, 230, 277, 232, 311, 237, 340, 236, 365, 232, 377, 223, 390, 217, 408, 212, 417, 218, 420, 228, 419, 240, 423, 242, 432, 243, 434, 246, 429, 250, 422, 258, 421, 267, 423, 272, 431, 273, 435, 275, 434, 278, 426, 283, 417, 285, 415, 292, 413, 299, 415, 314, 423, 316, 424, 319, 421, 320, 410, 321, 401, 321, 397, 319, 396, 309, 394, 296, 392, 266, 381, 254, 360, 255, 349, 267, 331, 272, 315, 273, 278, 265, 227, 263)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform2" type="Polygon2D" parent="Itch/Mountain"]
+position = Vector2(-92, -148)
+color = Color(0.200925, 0.418321, 0.352166, 1)
+polygon = PackedVector2Array(360, 394, 350, 396, 327, 399, 324, 412, 318, 424, 313, 436, 318, 446, 336, 444, 384, 442, 398, 452, 425, 453, 487, 445, 508, 446, 513, 443, 515, 434, 513, 425, 511, 422, 501, 422, 491, 420, 488, 414, 485, 398, 480, 396, 461, 393, 459, 392, 458, 379, 457, 368, 453, 367, 436, 365, 431, 363, 429, 352, 428, 347, 423, 346, 417, 345, 413, 344, 408, 340, 399, 340, 392, 341, 386, 343, 376, 344, 375, 348, 373, 368, 371, 390, 372, 393, 370, 394, 367, 394)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform3" type="Polygon2D" parent="Itch/Mountain"]
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(448, 332, 452, 376, 452, 394, 448, 397, 440, 399, 438, 402, 446, 405, 450, 411, 453, 419, 457, 431, 450, 436, 445, 436, 444, 439, 447, 442, 454, 449, 455, 456, 450.149, 466.395, 448, 471, 444, 475, 440, 476, 436, 476, 432, 477, 434, 480, 440, 482, 450, 488, 449, 506, 442, 515, 435, 515, 428, 515, 417, 516, 408, 516, 390, 514, 389, 517, 393, 522, 403, 522, 414, 524, 427, 524, 460, 529, 472, 544, 473, 561, 472, 576, 474, 591, 473, 601, 472, 606, 469, 608, 464, 609, 458, 609, 459, 612, 467, 612, 472, 613.87, 473, 621, 472, 633, 458, 632, 457, 634, 459, 635, 467, 636, 472, 637, 473, 643, 473, 652, 472, 657, 468, 659, 459, 658, 458, 660, 467, 663, 472, 664.486, 477, 673, 495, 667, 552, 664, 539, 500, 532, 471, 526, 446, 512, 415, 508, 380, 499, 357, 488, 340, 474, 321, 461, 303, 456, 290, 452, 284, 448, 286, 446, 292, 439, 299, 437, 304, 437, 308, 424, 312, 423, 319, 428, 324, 436, 332)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform4" type="Polygon2D" parent="Itch/Mountain"]
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(404, 320, 385, 321, 383, 329, 388, 336, 399, 339, 409, 335, 414, 331, 411, 321)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform5" type="Polygon2D" parent="Itch/Mountain"]
+position = Vector2(9, 3)
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(355, 324, 346, 325, 331, 324, 324, 326, 322, 331, 326, 338, 339, 342, 349, 340, 355, 339, 358, 334, 357, 329)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform6" type="Polygon2D" parent="Itch/Mountain"]
+position = Vector2(5, 4)
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(307, 328, 306, 335, 304, 342, 289, 344, 283, 343, 277, 340, 272, 338, 272, 335, 273, 331, 273, 327, 277, 326, 283, 325, 288, 324, 293, 325, 299, 326, 304, 326)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform7" type="Polygon2D" parent="Itch/Mountain"]
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(246, 333, 242, 331, 232, 330, 225, 331, 218, 335, 219, 342, 220, 349, 226, 350, 237, 347, 245, 348, 253, 347, 257, 343, 256, 337, 251, 334)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform8" type="Polygon2D" parent="Itch/Mountain"]
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(347, 515, 313, 514, 290, 515, 284, 517, 282, 520, 286, 522, 294, 523, 302, 521, 313, 523, 328, 523, 344, 523, 352, 521, 350, 516)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform9" type="Polygon2D" parent="Itch/Mountain"]
+position = Vector2(-96, -56)
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(306, 579, 323, 580, 338, 582, 341, 584, 340, 591, 334, 595, 324, 597, 305, 597, 296, 593, 287, 591, 282, 588, 284, 582)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Sign" type="Node2D" parent="Itch"]
+position = Vector2(876, 478)
+scale = Vector2(4, 4)
+
+[node name="Polygon2D9" type="Polygon2D" parent="Itch/Sign"]
+color = Color(1, 0.8, 0.164706, 1)
+polygon = PackedVector2Array(-136, 116, -149, 108, -155, 94, -152, 75, -24, -142, -13, -148, -2, -148, 9, -140, 136, 79, 138, 94, 133, 108, 123, 116)
+
+[node name="Polygon2D" type="Polygon2D" parent="Itch/Sign"]
+position = Vector2(-320, 152)
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(431, -62, 432, -63, 432, -65, 313, -268, 311, -268, 192, -66, 192, -64.5, 192, -62, 176, -63, 177, -69, 304, -285, 308, -287, 316, -287, 320, -285, 447, -70, 448, -61, 447, -56, 443, -51, 436, -46, 189, -46, 182, -50, 177, -56, 176, -63, 192, -62)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Itch/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(-42, -46, -25, -43, -30, -13, -26, 9, -34, 38, -8, 62, -5, 83, -117, 83)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Itch/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(-20, -12, -1, -6, 0, 6, 8, -5, -1, -18, -2, -21, 1, -23, 4, -21, 15, -7, 15, -4, 5, 8, 13, 16, 14, 16, 14, 9, 16, 8, 31, 13, 32, 16, 29, 18, 20, 14, 20, 25, 16, 31, 15, 41, 28, 46, 28, 49, 25, 50, 9, 44, 11, 32, 10, 29, -6, 14, -6, -2, -23, -7, -24, -10, -22, -12)
+
+[node name="Polygon2D4" type="Polygon2D" parent="Itch/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(22, 39, 20, 38, 18, 36, 18, 33, 19, 30, 23, 28, 27, 29, 29, 32, 29, 35, 27, 38, 25, 39)
+
+[node name="Polygon2D5" type="Polygon2D" parent="Itch/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(-19, -44, -14, -45, -11, -42, -19, -43)
+
+[node name="Polygon2D6" type="Polygon2D" parent="Itch/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(-20, -36, -15, -31, -21, -32)
+
+[node name="Polygon2D7" type="Polygon2D" parent="Itch/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(-8, -31, -5, -27, -1, -32, -7, -33)
+
+[node name="Polygon2D8" type="Polygon2D" parent="Itch/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(-24, -25, -16, -25, -20, -20, -25, -23)
+
+[node name="Title" type="Sprite2D" parent="Itch/Sign"]
+position = Vector2(-130.5, -63.75)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_g1eue")
+
+[node name="Clouds" type="Node2D" parent="Itch"]
+position = Vector2(328, -84)
+scale = Vector2(0.5, 0.5)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Itch/Clouds"]
+position = Vector2(714, 982)
+scale = Vector2(2.5, 2.5)
+polygon = PackedVector2Array(328, -102, 288, -98, 242, -94, 180, -108, 142, -138, 140, -178, 190, -168, 206, -210, 252, -238, 300, -228, 314, -234, 358, -268, 430, -250, 448, -206, 450, -190, 502, -194, 504, -132, 426, -106, 342, -100)
+
+[node name="Polygon2D" type="Polygon2D" parent="Itch/Clouds"]
+position = Vector2(1890, 1898)
+scale = Vector2(2.5, 2.5)
+polygon = PackedVector2Array(-322, 10, -328, -20, -334, -40, -326, -70, -306, -90, -270, -88, -256, -78, -252, -102, -242, -144, -204, -160, -146, -138, -122, -112, -94, -142, -64, -156, -16, -140, 32, -150, 72, -106, 74, -62, 52, -34, 110, -24, 112, 12, 72, 40, -42, 40, -136, 24, -204, 32, -276, 24)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Itch/Clouds"]
+position = Vector2(250, 208)
+scale = Vector2(2.5, 2.5)
+polygon = PackedVector2Array(246, 62, 192, 66, 160, 64, 148, 36, 170, 22, 176, 4, 208, 4, 232, 20, 248, -2, 274, -10, 296, 0, 322, 20, 302, 50, 266, 52)
+
+[node name="ColorRect" type="ColorRect" parent="Itch"]
+z_index = -3
+offset_right = 1260.0
+offset_bottom = 1000.0
+color = Color(0.380392, 0.533333, 0.772549, 1)
+
+[node name="Ludum Dare" type="SubViewport" parent="."]
+canvas_item_default_texture_filter = 0
+size = Vector2i(1280, 1024)
+script = ExtResource("1_af4k1")
+file_name = "ld.png"
+
+[node name="Mountain" type="Node2D" parent="Ludum Dare"]
+position = Vector2(-234, 30)
+scale = Vector2(1.86738, 1.86738)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Ludum Dare/Mountain"]
+color = Color(0.146047, 0.319389, 0.265984, 1)
+polygon = PackedVector2Array(165, 369, 156, 390, 110, 662, 262, 664, 411, 669, 481, 667, 492, 664, 492, 358, 484, 348, 477, 336, 466, 323, 459, 309, 451, 291, 445, 274, 435, 258, 421, 254, 405, 243, 392, 236, 381, 222, 368, 209, 350, 205, 339, 200, 287, 197, 279, 201, 267, 208, 258, 219, 244, 229, 230, 240, 217, 250, 212, 271, 210, 295, 199, 322, 183, 327)
+
+[node name="Platform" type="Polygon2D" parent="Ludum Dare/Mountain"]
+position = Vector2(0, 177)
+color = Color(0.200925, 0.418321, 0.352166, 1)
+polygon = PackedVector2Array(192, 298, 175, 310, 165, 332, 164, 339, 163, 353, 163, 366, 165, 378, 168, 391, 174, 406, 184, 423, 189, 429, 199, 439, 208, 447, 218, 452, 236, 459, 243, 459, 245, 457, 247, 452, 248, 450, 270, 448, 272, 444, 273, 439, 275, 438, 287, 438, 295, 437, 297, 440, 294, 446, 295, 450, 295, 457, 295, 459, 297, 466, 302, 478, 317, 478, 325, 476, 326, 468, 325, 455, 325, 450, 326, 445, 327, 442, 326, 439, 323, 437, 320, 436, 319, 434, 319, 432, 348, 430, 349, 432, 348, 434, 347, 435, 342, 436, 339, 438, 337, 445, 337, 450, 337, 452, 337, 455, 338, 459, 340, 473, 348, 472, 361, 472, 366, 467, 365, 443, 366, 438, 368, 435, 392, 436, 397, 436, 406, 429, 416, 428, 423, 429, 424, 433, 424, 443.626, 437, 443, 437, 445, 430, 447, 424, 447.434, 422, 455, 423, 466, 429, 467, 437, 468, 436, 471, 429, 471, 424, 472, 423, 478, 423, 488, 424, 493, 429, 495, 438, 496, 437, 498, 426, 499, 252, 497, 224, 502, 190, 500, 176, 502, 170, 511, 139, 510, 92, 491, 126, 348, 132, 319, 143, 279, 149, 244, 150, 205, 176, 157, 180, 155, 183, 155, 183, 159, 182, 171, 186, 178, 205, 181, 208, 184, 210, 196, 212, 200, 233, 202, 235, 206, 236, 215, 238, 225, 240, 227, 253, 230, 277, 232, 311, 237, 340, 236, 365, 232, 377, 223, 390, 217, 408, 212, 417, 218, 420, 228, 419, 240, 423, 242, 432, 243, 434, 246, 429, 250, 422, 258, 421, 267, 423, 272, 431, 273, 435, 275, 434, 278, 426, 283, 417, 285, 415, 292, 413, 299, 415, 314, 423, 316, 424, 319, 421, 320, 410, 321, 401, 321, 397, 319, 396, 309, 394, 296, 392, 266, 381, 254, 360, 255, 349, 267, 331, 272, 315, 273, 278, 265, 227, 263)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform2" type="Polygon2D" parent="Ludum Dare/Mountain"]
+position = Vector2(-92, -148)
+color = Color(0.200925, 0.418321, 0.352166, 1)
+polygon = PackedVector2Array(360, 394, 350, 396, 327, 399, 324, 412, 318, 424, 313, 436, 318, 446, 336, 444, 384, 442, 398, 452, 425, 453, 487, 445, 508, 446, 513, 443, 515, 434, 513, 425, 511, 422, 501, 422, 491, 420, 488, 414, 485, 398, 480, 396, 461, 393, 459, 392, 458, 379, 457, 368, 453, 367, 436, 365, 431, 363, 429, 352, 428, 347, 423, 346, 417, 345, 413, 344, 408, 340, 399, 340, 392, 341, 386, 343, 376, 344, 375, 348, 373, 368, 371, 390, 372, 393, 370, 394, 367, 394)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform3" type="Polygon2D" parent="Ludum Dare/Mountain"]
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(448, 332, 452, 376, 452, 394, 448, 397, 440, 399, 438, 402, 446, 405, 450, 411, 453, 419, 457, 431, 450, 436, 445, 436, 444, 439, 447, 442, 454, 449, 455, 456, 450.149, 466.395, 448, 471, 444, 475, 440, 476, 436, 476, 432, 477, 434, 480, 440, 482, 450, 488, 449, 506, 442, 515, 435, 515, 428, 515, 417, 516, 408, 516, 390, 514, 389, 517, 393, 522, 403, 522, 414, 524, 427, 524, 460, 529, 472, 544, 473, 561, 472, 576, 474, 591, 473, 601, 472, 606, 469, 608, 464, 609, 458, 609, 459, 612, 467, 612, 472, 613.87, 473, 621, 472, 633, 458, 632, 457, 634, 459, 635, 467, 636, 472, 637, 473, 643, 473, 652, 472, 657, 468, 659, 459, 658, 458, 660, 467, 663, 472, 664.486, 477, 673, 495, 667, 552, 664, 539, 500, 532, 471, 526, 446, 512, 415, 508, 380, 499, 357, 488, 340, 474, 321, 461, 303, 456, 290, 452, 284, 448, 286, 446, 292, 439, 299, 437, 304, 437, 308, 424, 312, 423, 319, 428, 324, 436, 332)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform4" type="Polygon2D" parent="Ludum Dare/Mountain"]
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(404, 320, 385, 321, 383, 329, 388, 336, 399, 339, 409, 335, 414, 331, 411, 321)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform5" type="Polygon2D" parent="Ludum Dare/Mountain"]
+position = Vector2(9, 3)
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(355, 324, 346, 325, 331, 324, 324, 326, 322, 331, 326, 338, 339, 342, 349, 340, 355, 339, 358, 334, 357, 329)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform6" type="Polygon2D" parent="Ludum Dare/Mountain"]
+position = Vector2(5, 4)
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(307, 328, 306, 335, 304, 342, 289, 344, 283, 343, 277, 340, 272, 338, 272, 335, 273, 331, 273, 327, 277, 326, 283, 325, 288, 324, 293, 325, 299, 326, 304, 326)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform7" type="Polygon2D" parent="Ludum Dare/Mountain"]
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(246, 333, 242, 331, 232, 330, 225, 331, 218, 335, 219, 342, 220, 349, 226, 350, 237, 347, 245, 348, 253, 347, 257, 343, 256, 337, 251, 334)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform8" type="Polygon2D" parent="Ludum Dare/Mountain"]
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(347, 515, 313, 514, 290, 515, 284, 517, 282, 520, 286, 522, 294, 523, 302, 521, 313, 523, 328, 523, 344, 523, 352, 521, 350, 516)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform9" type="Polygon2D" parent="Ludum Dare/Mountain"]
+position = Vector2(-96, -56)
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(306, 579, 323, 580, 338, 582, 341, 584, 340, 591, 334, 595, 324, 597, 305, 597, 296, 593, 287, 591, 282, 588, 284, 582)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Sign" type="Node2D" parent="Ludum Dare"]
+position = Vector2(893.97, 492.68)
+scale = Vector2(4, 4)
+
+[node name="Polygon2D9" type="Polygon2D" parent="Ludum Dare/Sign"]
+color = Color(1, 0.8, 0.164706, 1)
+polygon = PackedVector2Array(-136, 116, -149, 108, -155, 94, -152, 75, -24, -142, -13, -148, -2, -148, 9, -140, 136, 79, 138, 94, 133, 108, 123, 116)
+
+[node name="Polygon2D" type="Polygon2D" parent="Ludum Dare/Sign"]
+position = Vector2(-320, 152)
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(431, -62, 432, -63, 432, -65, 313, -268, 311, -268, 192, -66, 192, -64.5, 192, -62, 176, -63, 177, -69, 304, -285, 308, -287, 316, -287, 320, -285, 447, -70, 448, -61, 447, -56, 443, -51, 436, -46, 189, -46, 182, -50, 177, -56, 176, -63, 192, -62)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Ludum Dare/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(-42, -46, -25, -43, -30, -13, -26, 9, -34, 38, -8, 62, -5, 83, -117, 83)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Ludum Dare/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(-20, -12, -1, -6, 0, 6, 8, -5, -1, -18, -2, -21, 1, -23, 4, -21, 15, -7, 15, -4, 5, 8, 13, 16, 14, 16, 14, 9, 16, 8, 31, 13, 32, 16, 29, 18, 20, 14, 20, 25, 16, 31, 15, 41, 28, 46, 28, 49, 25, 50, 9, 44, 11, 32, 10, 29, -6, 14, -6, -2, -23, -7, -24, -10, -22, -12)
+
+[node name="Polygon2D4" type="Polygon2D" parent="Ludum Dare/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(22, 39, 20, 38, 18, 36, 18, 33, 19, 30, 23, 28, 27, 29, 29, 32, 29, 35, 27, 38, 25, 39)
+
+[node name="Polygon2D5" type="Polygon2D" parent="Ludum Dare/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(-19, -44, -14, -45, -11, -42, -19, -43)
+
+[node name="Polygon2D6" type="Polygon2D" parent="Ludum Dare/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(-20, -36, -15, -31, -21, -32)
+
+[node name="Polygon2D7" type="Polygon2D" parent="Ludum Dare/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(-8, -31, -5, -27, -1, -32, -7, -33)
+
+[node name="Polygon2D8" type="Polygon2D" parent="Ludum Dare/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(-24, -25, -16, -25, -20, -20, -25, -23)
+
+[node name="Title" type="Sprite2D" parent="Ludum Dare"]
+position = Vector2(391.95, 222.415)
+scale = Vector2(2.25, 2.25)
+texture = ExtResource("1_g1eue")
+
+[node name="Clouds" type="Node2D" parent="Ludum Dare"]
+position = Vector2(328, -84)
+scale = Vector2(0.5, 0.5)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Ludum Dare/Clouds"]
+position = Vector2(745.485, 982)
+scale = Vector2(2.5, 2.5)
+polygon = PackedVector2Array(328, -102, 288, -98, 242, -94, 180, -108, 142, -138, 140, -178, 190, -168, 206, -210, 252, -238, 300, -228, 314, -234, 358, -268, 430, -250, 448, -206, 450, -190, 502, -194, 504, -132, 426, -106, 342, -100)
+
+[node name="Polygon2D" type="Polygon2D" parent="Ludum Dare/Clouds"]
+position = Vector2(1915.09, 1898)
+scale = Vector2(2.5, 2.5)
+polygon = PackedVector2Array(-322, 10, -328, -20, -334, -40, -326, -70, -306, -90, -270, -88, -256, -78, -252, -102, -242, -144, -204, -160, -146, -138, -122, -112, -94, -142, -64, -156, -16, -140, 32, -150, 72, -106, 74, -62, 52, -34, 110, -24, 112, 12, 72, 40, -42, 40, -136, 24, -204, 32, -276, 24)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Ludum Dare/Clouds"]
+position = Vector2(326.435, 208)
+scale = Vector2(2.5, 2.5)
+polygon = PackedVector2Array(246, 62, 192, 66, 160, 64, 148, 36, 170, 22, 176, 4, 208, 4, 232, 20, 248, -2, 274, -10, 296, 0, 322, 20, 302, 50, 266, 52)
+
+[node name="ColorRect" type="ColorRect" parent="Ludum Dare"]
+z_index = -3
+offset_right = 1280.0
+offset_bottom = 1024.0
+color = Color(0.380392, 0.533333, 0.772549, 1)
+
+[node name="Ludum Dare Banner" type="SubViewport" parent="."]
+canvas_item_default_texture_filter = 0
+size = Vector2i(1280, 360)
+script = ExtResource("1_af4k1")
+file_name = "ld_banner.png"
+
+[node name="Mountain" type="Node2D" parent="Ludum Dare Banner"]
+position = Vector2(623.61, -141.25)
+scale = Vector2(1.182, 1.182)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Ludum Dare Banner/Mountain"]
+color = Color(0.146047, 0.319389, 0.265984, 1)
+polygon = PackedVector2Array(165, 369, 156, 390, 110, 662, 262, 664, 411, 669, 481, 667, 492, 664, 492, 358, 484, 348, 477, 336, 466, 323, 459, 309, 451, 291, 445, 274, 435, 258, 421, 254, 405, 243, 392, 236, 381, 222, 368, 209, 350, 205, 339, 200, 287, 197, 279, 201, 267, 208, 258, 219, 244, 229, 230, 240, 217, 250, 212, 271, 210, 295, 199, 322, 183, 327)
+
+[node name="Platform" type="Polygon2D" parent="Ludum Dare Banner/Mountain"]
+position = Vector2(0, 177)
+color = Color(0.200925, 0.418321, 0.352166, 1)
+polygon = PackedVector2Array(192, 298, 175, 310, 165, 332, 164, 339, 163, 353, 163, 366, 165, 378, 168, 391, 174, 406, 184, 423, 189, 429, 199, 439, 208, 447, 218, 452, 236, 459, 243, 459, 245, 457, 247, 452, 248, 450, 270, 448, 272, 444, 273, 439, 275, 438, 287, 438, 295, 437, 297, 440, 294, 446, 295, 450, 295, 457, 295, 459, 297, 466, 302, 478, 317, 478, 325, 476, 326, 468, 325, 455, 325, 450, 326, 445, 327, 442, 326, 439, 323, 437, 320, 436, 319, 434, 319, 432, 348, 430, 349, 432, 348, 434, 347, 435, 342, 436, 339, 438, 337, 445, 337, 450, 337, 452, 337, 455, 338, 459, 340, 473, 348, 472, 361, 472, 366, 467, 365, 443, 366, 438, 368, 435, 392, 436, 397, 436, 406, 429, 416, 428, 423, 429, 424, 433, 424, 443.626, 437, 443, 437, 445, 430, 447, 424, 447.434, 422, 455, 423, 466, 429, 467, 437, 468, 436, 471, 429, 471, 424, 472, 423, 478, 423, 488, 424, 493, 429, 495, 438, 496, 437, 498, 426, 499, 252, 497, 224, 502, 190, 500, 176, 502, 170, 511, 139, 510, 92, 491, 126, 348, 132, 319, 143, 279, 149, 244, 150, 205, 176, 157, 180, 155, 183, 155, 183, 159, 182, 171, 186, 178, 205, 181, 208, 184, 210, 196, 212, 200, 233, 202, 235, 206, 236, 215, 238, 225, 240, 227, 253, 230, 277, 232, 311, 237, 340, 236, 365, 232, 377, 223, 390, 217, 408, 212, 417, 218, 420, 228, 419, 240, 423, 242, 432, 243, 434, 246, 429, 250, 422, 258, 421, 267, 423, 272, 431, 273, 435, 275, 434, 278, 426, 283, 417, 285, 415, 292, 413, 299, 415, 314, 423, 316, 424, 319, 421, 320, 410, 321, 401, 321, 397, 319, 396, 309, 394, 296, 392, 266, 381, 254, 360, 255, 349, 267, 331, 272, 315, 273, 278, 265, 227, 263)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform2" type="Polygon2D" parent="Ludum Dare Banner/Mountain"]
+position = Vector2(-92, -148)
+color = Color(0.200925, 0.418321, 0.352166, 1)
+polygon = PackedVector2Array(360, 394, 350, 396, 327, 399, 324, 412, 318, 424, 313, 436, 318, 446, 336, 444, 384, 442, 398, 452, 425, 453, 487, 445, 508, 446, 513, 443, 515, 434, 513, 425, 511, 422, 501, 422, 491, 420, 488, 414, 485, 398, 480, 396, 461, 393, 459, 392, 458, 379, 457, 368, 453, 367, 436, 365, 431, 363, 429, 352, 428, 347, 423, 346, 417, 345, 413, 344, 408, 340, 399, 340, 392, 341, 386, 343, 376, 344, 375, 348, 373, 368, 371, 390, 372, 393, 370, 394, 367, 394)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform3" type="Polygon2D" parent="Ludum Dare Banner/Mountain"]
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(448, 332, 452, 376, 452, 394, 448, 397, 440, 399, 438, 402, 446, 405, 450, 411, 453, 419, 457, 431, 450, 436, 445, 436, 444, 439, 447, 442, 454, 449, 455, 456, 450.149, 466.395, 448, 471, 444, 475, 440, 476, 436, 476, 432, 477, 434, 480, 440, 482, 450, 488, 449, 506, 442, 515, 435, 515, 428, 515, 417, 516, 408, 516, 390, 514, 389, 517, 393, 522, 403, 522, 414, 524, 427, 524, 460, 529, 472, 544, 473, 561, 472, 576, 474, 591, 473, 601, 472, 606, 469, 608, 464, 609, 458, 609, 459, 612, 467, 612, 472, 613.87, 473, 621, 472, 633, 458, 632, 457, 634, 459, 635, 467, 636, 472, 637, 473, 643, 473, 652, 472, 657, 468, 659, 459, 658, 458, 660, 467, 663, 472, 664.486, 477, 673, 495, 667, 552, 664, 539, 500, 532, 471, 526, 446, 512, 415, 508, 380, 499, 357, 488, 340, 474, 321, 461, 303, 456, 290, 452, 284, 448, 286, 446, 292, 439, 299, 437, 304, 437, 308, 424, 312, 423, 319, 428, 324, 436, 332)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform4" type="Polygon2D" parent="Ludum Dare Banner/Mountain"]
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(404, 320, 385, 321, 383, 329, 388, 336, 399, 339, 409, 335, 414, 331, 411, 321)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform5" type="Polygon2D" parent="Ludum Dare Banner/Mountain"]
+position = Vector2(9, 3)
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(355, 324, 346, 325, 331, 324, 324, 326, 322, 331, 326, 338, 339, 342, 349, 340, 355, 339, 358, 334, 357, 329)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform6" type="Polygon2D" parent="Ludum Dare Banner/Mountain"]
+position = Vector2(5, 4)
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(307, 328, 306, 335, 304, 342, 289, 344, 283, 343, 277, 340, 272, 338, 272, 335, 273, 331, 273, 327, 277, 326, 283, 325, 288, 324, 293, 325, 299, 326, 304, 326)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform7" type="Polygon2D" parent="Ludum Dare Banner/Mountain"]
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(246, 333, 242, 331, 232, 330, 225, 331, 218, 335, 219, 342, 220, 349, 226, 350, 237, 347, 245, 348, 253, 347, 257, 343, 256, 337, 251, 334)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform8" type="Polygon2D" parent="Ludum Dare Banner/Mountain"]
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(347, 515, 313, 514, 290, 515, 284, 517, 282, 520, 286, 522, 294, 523, 302, 521, 313, 523, 328, 523, 344, 523, 352, 521, 350, 516)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Platform9" type="Polygon2D" parent="Ludum Dare Banner/Mountain"]
+position = Vector2(-96, -56)
+color = Color(0.2, 0.415686, 0.34902, 1)
+polygon = PackedVector2Array(306, 579, 323, 580, 338, 582, 341, 584, 340, 591, 334, 595, 324, 597, 305, 597, 296, 593, 287, 591, 282, 588, 284, 582)
+script = ExtResource("2_af4k1")
+metadata/_custom_type_script = "uid://dhvjujmdp6cjr"
+
+[node name="Sign" type="Node2D" parent="Ludum Dare Banner"]
+position = Vector2(220.125, 198.575)
+scale = Vector2(1.305, 1.305)
+
+[node name="Polygon2D9" type="Polygon2D" parent="Ludum Dare Banner/Sign"]
+color = Color(1, 0.8, 0.164706, 1)
+polygon = PackedVector2Array(-136, 116, -149, 108, -155, 94, -152, 75, -24, -142, -13, -148, -2, -148, 9, -140, 136, 79, 138, 94, 133, 108, 123, 116)
+
+[node name="Polygon2D" type="Polygon2D" parent="Ludum Dare Banner/Sign"]
+position = Vector2(-320, 152)
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(431, -62, 432, -63, 432, -65, 313, -268, 311, -268, 192, -66, 192, -64.5, 192, -62, 176, -63, 177, -69, 304, -285, 308, -287, 316, -287, 320, -285, 447, -70, 448, -61, 447, -56, 443, -51, 436, -46, 189, -46, 182, -50, 177, -56, 176, -63, 192, -62)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Ludum Dare Banner/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(-42, -46, -25, -43, -30, -13, -26, 9, -34, 38, -8, 62, -5, 83, -117, 83)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Ludum Dare Banner/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(-20, -12, -1, -6, 0, 6, 8, -5, -1, -18, -2, -21, 1, -23, 4, -21, 15, -7, 15, -4, 5, 8, 13, 16, 14, 16, 14, 9, 16, 8, 31, 13, 32, 16, 29, 18, 20, 14, 20, 25, 16, 31, 15, 41, 28, 46, 28, 49, 25, 50, 9, 44, 11, 32, 10, 29, -6, 14, -6, -2, -23, -7, -24, -10, -22, -12)
+
+[node name="Polygon2D4" type="Polygon2D" parent="Ludum Dare Banner/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(22, 39, 20, 38, 18, 36, 18, 33, 19, 30, 23, 28, 27, 29, 29, 32, 29, 35, 27, 38, 25, 39)
+
+[node name="Polygon2D5" type="Polygon2D" parent="Ludum Dare Banner/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(-19, -44, -14, -45, -11, -42, -19, -43)
+
+[node name="Polygon2D6" type="Polygon2D" parent="Ludum Dare Banner/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(-20, -36, -15, -31, -21, -32)
+
+[node name="Polygon2D7" type="Polygon2D" parent="Ludum Dare Banner/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(-8, -31, -5, -27, -1, -32, -7, -33)
+
+[node name="Polygon2D8" type="Polygon2D" parent="Ludum Dare Banner/Sign"]
+color = Color(0.211765, 0.203922, 0.207843, 1)
+polygon = PackedVector2Array(-24, -25, -16, -25, -20, -20, -25, -23)
+
+[node name="Title" type="Sprite2D" parent="Ludum Dare Banner"]
+position = Vector2(640, 178.675)
+scale = Vector2(2, 2)
+texture = ExtResource("1_g1eue")
+
+[node name="Clouds" type="Node2D" parent="Ludum Dare Banner"]
+position = Vector2(328, -84)
+scale = Vector2(0.5, 0.5)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Ludum Dare Banner/Clouds"]
+position = Vector2(745.485, 982)
+scale = Vector2(2.5, 2.5)
+polygon = PackedVector2Array(353.617, -59.8364, 330.427, -57.5174, 303.758, -55.1983, 267.813, -63.315, 245.782, -80.7078, 244.622, -103.898, 273.61, -98.1006, 282.887, -122.451, 309.556, -138.684, 337.384, -132.886, 345.501, -136.365, 371.01, -156.077, 412.753, -145.641, 423.189, -120.132, 424.348, -110.855, 454.496, -113.174, 455.655, -77.2292, 410.434, -62.1555, 361.734, -58.6769)
+
+[node name="Polygon2D" type="Polygon2D" parent="Ludum Dare Banner/Clouds"]
+position = Vector2(1915.09, 1898)
+scale = Vector2(2.5, 2.5)
+polygon = PackedVector2Array(-219.263, -535.92, -220.833, -543.77, -222.403, -549.004, -220.31, -556.854, -215.076, -562.087, -205.656, -561.564, -201.993, -558.947, -200.946, -565.227, -198.329, -576.218, -188.386, -580.404, -173.209, -574.648, -166.929, -567.844, -159.602, -575.694, -151.752, -579.358, -139.192, -575.171, -126.632, -577.788, -116.165, -566.274, -115.641, -554.761, -121.398, -547.434, -106.221, -544.817, -105.698, -535.397, -116.165, -528.07, -145.995, -528.07, -170.592, -532.257, -188.386, -530.164, -207.226, -532.257)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Ludum Dare Banner/Clouds"]
+position = Vector2(326.435, 208)
+scale = Vector2(2.5, 2.5)
+polygon = PackedVector2Array(553.383, 58.4315, 523.904, 60.6152, 506.434, 59.5233, 499.883, 44.2376, 511.894, 36.5947, 515.169, 26.7682, 532.638, 26.7682, 545.741, 35.5029, 554.475, 23.4927, 568.669, 19.1253, 580.679, 24.5845, 594.873, 35.5029, 583.955, 51.8805, 564.302, 52.9723)
+
+[node name="ColorRect" type="ColorRect" parent="Ludum Dare Banner"]
+z_index = -3
+offset_right = 1280.0
+offset_bottom = 1024.0
+color = Color(0.380392, 0.533333, 0.772549, 1)
+
+[node name="Icon" type="SubViewport" parent="."]
+canvas_item_default_texture_filter = 0
+size = Vector2i(32, 32)
+script = ExtResource("1_af4k1")
+file_name = "icon.png"
+
+[node name="Sprite2D" type="Sprite2D" parent="Icon"]
+position = Vector2(16, 17)
+scale = Vector2(2, 2)
+texture = ExtResource("4_xw14l")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="ColorRect" type="ColorRect" parent="Icon"]
+z_index = -3
+offset_right = 1280.0
+offset_bottom = 1024.0
+color = Color(0.380392, 0.533333, 0.772549, 1)
